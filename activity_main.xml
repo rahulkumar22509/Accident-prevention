@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mahesh.traffic.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextClock
+            android:id="@+id/time_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            tools:targetApi="jelly_bean_mr1" />
+        <TextView
+            android:id="@+id/date_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/time_display"
+            android:padding="5dp"
+            android:text="26/03/2016"
+            android:textColor="#000"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/vehicle_sec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_bar">
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            android:layout_marginLeft="30dp"/>
+        <TextView
+            android:id="@+id/model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:text="Ford Mustang GT"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/license"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/model"
+            android:text="License No: KA 03 MG 2784"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/owner_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/model"
+            android:layout_below="@+id/license"
+            android:text="Owner Id: 560198"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/speed_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/model"
+            android:layout_below="@+id/owner_id"
+            android:text="Speed: 147 Kmph"
+            android:padding="5dp"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/travel_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/vehicle_sec">
+        <TextView
+            android:id="@+id/destination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Destination: New Delhi"
+            android:padding="5dp"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/lane"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/destination"
+            android:text="Lane : 2"
+            android:padding="5dp"
+            android:textSize="18sp"/>
+        <ImageView
+            android:layout_height="75dp"
+            android:layout_width="75dp"
+            android:id="@+id/left_ind"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/destination"
+            android:src="@drawable/left"/>
+        <ImageView
+            android:layout_height="68dp"
+            android:layout_width="75dp"
+            android:id="@+id/right_ind"
+            android:layout_toRightOf="@+id/left_ind"
+            android:src="@drawable/right"
+            android:layout_marginTop="4dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/travel_details"
+        android:layout_marginTop="5dp">
+        <ImageView
+            android:id="@+id/traffic_map"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:src="@drawable/lane_map" />
+        <ImageView
+            android:id="@+id/location_marker"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/nh7"/>
+        <TextView
+            android:id="@+id/your_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Location"
+            android:textColor="#ff0"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>
